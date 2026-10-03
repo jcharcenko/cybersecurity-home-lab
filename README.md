@@ -16,44 +16,11 @@ The lab runs in VMware Workstation Pro on a Windows 11 host and currently consis
 
 - **Windows 11 DFIR Workstation** - monitored endpoint and digital forensics workstation running Sysmon, Splunk Universal Forwarder, Wireshark, KAPE, Autopsy, Volatility 3 and Eric Zimmerman tools.
 - **Ubuntu Splunk Server** - Ubuntu Server running Splunk Enterprise as the central SIEM for log ingestion, searching, detection and alerting.
-- **Kali Linux** - security testing and network analysis workstation for generating controlled activity and supporting future investigation exercises.
+- **Kali Linux** - security testing and network analysis workstation prepared for future controlled testing and investigation exercises.
 
 The virtual machines communicate through a VMware NAT network. Windows endpoint telemetry is forwarded to the Splunk server over TCP port 9997.
 
-A visual architecture diagram is included below.
-
-```mermaid
-flowchart LR
-    subgraph HOST["Windows 11 Host - VMware Workstation Pro"]
-        direction LR
-
-        subgraph WIN["WIN11-DFIR"]
-            W1["Sysmon"]
-            W2["Windows Security Logs"]
-            W3["Splunk Universal Forwarder"]
-            W4["DFIR Toolset"]
-
-            W1 --> W3
-            W2 --> W3
-        end
-
-        subgraph SPLUNK["Ubuntu-Splunk"]
-            S1["Splunk Enterprise"]
-            S2["Search & Analysis"]
-            S3["Scheduled Detections & Alerts"]
-
-            S1 --> S2
-            S2 --> S3
-        end
-
-        subgraph KALI["Kali Linux"]
-            K1["Security Testing"]
-            K2["Network Analysis"]
-        end
-
-        W3 -->|"TCP 9997"| S1
-    end
-```
+![Home SOC and DFIR Lab Architecture](architecture/lab-architecture.svg)
 
 ## Project Documentation
 
