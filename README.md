@@ -62,6 +62,7 @@ Detailed documentation for each component of the lab is available below:
 - [Windows 11 DFIR Workstation](windows-dfir/setup.md) - endpoint configuration, DFIR toolset, Sysmon deployment, Splunk Universal Forwarder and telemetry validation.
 - [Splunk Enterprise SIEM](splunk/setup.md) - Ubuntu-Splunk configuration, telemetry ingestion, SIEM workflow and validation.
 - [SIEM Detection Engineering](splunk/detections.md) - detection logic, SPL searches, controlled testing, alert configuration and lessons learned.
+- [Kali Linux Workstation](kali/setup.md) - security testing and network analysis workstation prepared for future controlled testing and detection-engineering exercises.
 
 ## SIEM Monitoring and Detection
 
@@ -78,6 +79,21 @@ The current lab includes three tested scheduled detections:
 Each detection was tested through controlled activity on the Windows endpoint and verified through Splunk's Triggered Alerts.
 
 Testing also demonstrated how a single event can satisfy multiple detection rules. For example, an encoded PowerShell command triggered both the general PowerShell execution detection and the more specific encoded-command detection. This provided a practical example of alert overlap, detection specificity and the need for tuning in a monitoring environment.
+
+## Technologies and Skills Demonstrated
+
+This project provided practical experience across several areas of security operations and digital forensics:
+
+- **SIEM:** Splunk Enterprise, SPL searching and scheduled alerting
+- **Endpoint Telemetry:** Sysmon and Windows Security Event Logs
+- **Log Forwarding:** Splunk Universal Forwarder
+- **Detection Engineering:** process, command-line and account-creation detections
+- **Windows Security:** event log permissions, process creation and account lifecycle events
+- **Digital Forensics:** KAPE, Autopsy, Volatility 3, Eric Zimmerman Tools and Sysinternals
+- **Network Analysis:** Wireshark
+- **Linux Administration:** Ubuntu Server, systemd, networking and service management
+- **Virtualisation:** VMware Workstation Pro and isolated lab networking
+- **Troubleshooting:** telemetry pipelines, service permissions, raw XML field extraction and scheduled-search behaviour
 
 ## Troubleshooting and Lessons Learned
 
