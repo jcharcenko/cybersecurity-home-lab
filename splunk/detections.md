@@ -218,6 +218,10 @@ Windows generated Security Event ID `4720`, which was forwarded to Splunk and ma
 
 The resulting event identified both the newly created account and the account responsible for creating it. Detection 003 subsequently appeared in Splunk Triggered Alerts.
 
+![Splunk search results showing Windows local account creation](../screenshots/local-account-creation-detection.png)
+
+*Figure 3 - Windows Security Event ID 4720 telemetry from controlled account-creation testing. SPL field extraction identifies the newly created account, target system and user responsible for creating the account.*
+
 ### Cleanup and Additional Validation
 
 After testing, the temporary account was removed:
