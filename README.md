@@ -55,6 +55,14 @@ flowchart LR
     end
 ```
 
+## Project Documentation
+
+Detailed documentation for each component of the lab is available below:
+
+- [Windows 11 DFIR Workstation](windows-dfir/setup.md) - endpoint configuration, DFIR toolset, Sysmon deployment, Splunk Universal Forwarder and telemetry validation.
+- [Splunk Enterprise SIEM](splunk/setup.md) - Ubuntu-Splunk configuration, telemetry ingestion, SIEM workflow and validation.
+- [SIEM Detection Engineering](splunk/detections.md) - detection logic, SPL searches, controlled testing, alert configuration and lessons learned.
+
 ## SIEM Monitoring and Detection
 
 The Windows 11 endpoint forwards both Sysmon and Windows Security event telemetry to Splunk Enterprise using the Splunk Universal Forwarder.
