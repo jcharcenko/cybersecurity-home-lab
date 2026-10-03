@@ -16,6 +16,14 @@ The initial detection set consists of:
 
 All three detections currently run every five minutes and search the previous five-minute event window.
 
+### Detection Testing Evidence
+
+The following screenshot shows the alerts generated during controlled testing of the three detection rules.
+
+![Splunk Triggered Alerts showing the three tested SIEM detections](../screenshots/splunk-triggered-alerts.png)
+
+*Figure 1 - Splunk Triggered Alerts following controlled detection testing. The encoded PowerShell test triggered both the general PowerShell execution rule and the more specific encoded-command rule, demonstrating overlapping detection logic. The local account creation test independently triggered the Windows Security Event ID 4720 detection.*
+
 ---
 
 ## Detection 001 - PowerShell Process Execution
