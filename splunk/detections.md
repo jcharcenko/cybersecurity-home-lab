@@ -20,7 +20,7 @@ All three detections currently run every five minutes and search the previous fi
 
 The following screenshot shows the alerts generated during controlled testing of the three detection rules.
 
-![Splunk Triggered Alerts showing the three tested SIEM detections](../screenshots/splunk-triggered-alerts.png)
+[![Splunk Triggered Alerts showing the three tested SIEM detections](../screenshots/splunk-triggered-alerts.png)](../screenshots/splunk-triggered-alerts.png)
 
 *Figure 1 - Splunk Triggered Alerts following controlled detection testing. The encoded PowerShell test triggered both the general PowerShell execution rule and the more specific encoded-command rule, demonstrating overlapping detection logic. The local account creation test independently triggered the Windows Security Event ID 4720 detection.*
 
@@ -139,7 +139,7 @@ The command simply produced the expected text output while generating the teleme
 
 Splunk captured the PowerShell process creation event and its encoded command line. Detection 002 subsequently appeared in Triggered Alerts.
 
-![Splunk search results showing encoded PowerShell execution](../screenshots/encoded-powershell-detection.png)
+[![Splunk search results showing encoded PowerShell execution](../screenshots/encoded-powershell-detection.png)](../screenshots/encoded-powershell-detection.png)
 
 *Figure 2 - Splunk search results from controlled encoded PowerShell testing. Sysmon Event ID 1 telemetry identifies the host, user, PowerShell executable and encoded command-line argument used during the test.*
 
@@ -218,7 +218,7 @@ Windows generated Security Event ID `4720`, which was forwarded to Splunk and ma
 
 The resulting event identified both the newly created account and the account responsible for creating it. Detection 003 subsequently appeared in Splunk Triggered Alerts.
 
-![Splunk search results showing Windows local account creation](../screenshots/local-account-creation-detection.png)
+[![Splunk search results showing Windows local account creation](../screenshots/local-account-creation-detection.png)](../screenshots/local-account-creation-detection.png)
 
 *Figure 3 - Windows Security Event ID 4720 telemetry from controlled account-creation testing. SPL field extraction identifies the newly created account, target system and user responsible for creating the account.*
 
