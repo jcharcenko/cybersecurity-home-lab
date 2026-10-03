@@ -22,7 +22,38 @@ The virtual machines communicate through a VMware NAT network. Windows endpoint 
 
 A visual architecture diagram is included below.
 
-<!-- Architecture diagram will be added here -->
+```mermaid
+flowchart LR
+    subgraph HOST["Windows 11 Host - VMware Workstation Pro"]
+        direction LR
+
+        subgraph WIN["WIN11-DFIR"]
+            W1["Sysmon"]
+            W2["Windows Security Logs"]
+            W3["Splunk Universal Forwarder"]
+            W4["DFIR Toolset"]
+
+            W1 --> W3
+            W2 --> W3
+        end
+
+        subgraph SPLUNK["Ubuntu-Splunk"]
+            S1["Splunk Enterprise"]
+            S2["Search & Analysis"]
+            S3["Scheduled Detections & Alerts"]
+
+            S1 --> S2
+            S2 --> S3
+        end
+
+        subgraph KALI["Kali Linux"]
+            K1["Security Testing"]
+            K2["Network Analysis"]
+        end
+
+        W3 -->|"TCP 9997"| S1
+    end
+```
 
 ## SIEM Monitoring and Detection
 
