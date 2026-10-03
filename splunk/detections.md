@@ -139,6 +139,10 @@ The command simply produced the expected text output while generating the teleme
 
 Splunk captured the PowerShell process creation event and its encoded command line. Detection 002 subsequently appeared in Triggered Alerts.
 
+![Splunk search results showing encoded PowerShell execution](../screenshots/encoded-powershell-detection.png)
+
+*Figure 2 - Splunk search results from controlled encoded PowerShell testing. Sysmon Event ID 1 telemetry identifies the host, user, PowerShell executable and encoded command-line argument used during the test.*
+
 ### Detection Overlap
 
 The same test also triggered **Detection 001 - PowerShell Process Execution**.
